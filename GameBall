@@ -1,0 +1,24 @@
+package GameBegin;
+
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+/*
+ * 主类
+ */
+public final class GameBall extends JFrame{
+	public static final int width=700;
+	public static final int height=600;
+	public static void main(String[] args) {
+		GameBegin g = new GameBegin();
+		MyPanel mp = new MyPanel();
+		int scWidth=Toolkit.getDefaultToolkit().getScreenSize().width;
+		int scHeight=Toolkit.getDefaultToolkit().getScreenSize().height;
+		g.add(mp);
+		g.setBounds((scWidth-width)/2, (scHeight-height)/2, width, height);
+		g.setVisible(true);
+		g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+}
